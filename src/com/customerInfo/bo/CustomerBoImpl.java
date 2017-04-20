@@ -32,7 +32,7 @@ public class CustomerBoImpl implements CustomerBo {
 			CustomerValidationException exception = new CustomerValidationException(sbf.toString());
 			throw exception;
 		}
-		System.out.println("Completed of CustomerBoImpl: addCustomerPersonalInfo(CustomerInfo customerInfo)");
+		System.out.println("Completed CustomerBoImpl: addCustomerPersonalInfo(CustomerInfo customerInfo)");
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class CustomerBoImpl implements CustomerBo {
 			CustomerValidationException exception = new CustomerValidationException(sbf.toString());
 			throw exception;
 		}
-		System.out.println("Completed of CustomerBoImpl: addCustomerContactInfo(CustomerInfo customerInfo)");
+		System.out.println("Completed CustomerBoImpl: addCustomerContactInfo(CustomerInfo customerInfo)");
 		
 	}
 
@@ -70,25 +70,28 @@ public class CustomerBoImpl implements CustomerBo {
 		}else{
 			customerDao.addCustomer(customerInfo);
 		}
-		System.out.println("Completed of CustomerBoImpl: addCustomerBankInfo(CustomerInfo customerInfo)");
+		System.out.println("Completed CustomerBoImpl: addCustomerBankInfo(CustomerInfo customerInfo)");
 	
 	}
 
 	@Override
 	public void updateCustomer(CustomerInfo customerInfo) throws CustomerValidationException, Exception {
 		
-		
+		System.out.println("Starting of CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
+		System.out.println("Completed CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
 	}
 
 	@Override
 	public CustomerInfo getCustomer(CustomerInfo customerInfo) throws CustomerValidationException, Exception {
-	
+		System.out.println("Starting of CustomerBoImpl: getCustomer(CustomerInfo customerInfo)");
+		System.out.println("Completed CustomerBoImpl: getCustomer(CustomerInfo customerInfo)");
 		return null;
 	}
 
 	@Override
 	public CustomerInfo deleteCustomer(String ssn) throws CustomerValidationException, Exception {
-		
+		System.out.println("Starting of CustomerBoImpl: deleteCustomer(String ssn)");
+		System.out.println("Completed CustomerBoImpl: deleteCustomer(String ssn)");
 		return null;
 	}
 
