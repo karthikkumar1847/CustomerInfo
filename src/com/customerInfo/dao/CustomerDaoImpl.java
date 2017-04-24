@@ -1,5 +1,7 @@
 package com.customerInfo.dao;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
@@ -9,9 +11,13 @@ import com.customerInfo.vo.CustomerInfo;
 
 @Repository
 public class CustomerDaoImpl implements CustomerDao{
-
+	public static Logger logger=Logger.getLogger(CustomerDaoImpl.class);
+	
+	
 	@Override
 	public void addCustomer(CustomerInfo customerInfo) {
+		//PropertyConfigurator.configure("log4j.properties");
+		 logger.info("Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
 		System.out.println("Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
 		Session session = HibernateConnector.getInstance().getSession();
 		Transaction tx = session.beginTransaction();
@@ -19,6 +25,7 @@ public class CustomerDaoImpl implements CustomerDao{
 		tx.commit();
 		session.close();
 		System.out.println("Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
+		logger.info("Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
 	}
 
 	@Override

@@ -1,10 +1,13 @@
 package com.customerInfo.controller;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 import com.customerInfo.bo.CustomerBo;
@@ -14,6 +17,7 @@ import com.customerInfo.vo.CustomerInfo;
 @Controller
 @SessionAttributes("cinfo")
 public class CustomerController {
+	private static Logger logger=Logger.getLogger("CustomerController");
 	
 	@Autowired
 	private CustomerBo customerBo = null;
@@ -22,12 +26,18 @@ public class CustomerController {
 		super();
 	}
 	
-	@RequestMapping("/pageEntry.go")
+	@RequestMapping(value="/pageEntry.go")//method = RequestMethod.GET)
 	public String displayPerson(Model model){
-		System.out.println("Starting of CustomerController: displayPerson(Model model)");
+		PropertyConfigurator.configure("log4j.properties");
+		 logger.info("Starting of CustomerController: displayPerson(Model model)");
+		 System.out.println("Starting of CustomerController: displayPerson(Model model)");
+		
 		CustomerInfo cinfo = new CustomerInfo();
 		model.addAttribute("cinfo",cinfo);
+		
 		System.out.println("Completed CustomerController: displayPerson(Model model)");
+		logger.info("Completed CustomerController: displayPerson(Model model)");
+		
 		return "person";
 	}
 	
