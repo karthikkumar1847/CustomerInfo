@@ -14,6 +14,10 @@ import com.customerInfo.bo.CustomerBo;
 import com.customerInfo.validation.CustomerValidationException;
 import com.customerInfo.vo.CustomerInfo;
 
+/**
+ * @author Karthik
+ *
+ */
 @Controller
 @SessionAttributes("cinfo")
 public class CustomerController {
