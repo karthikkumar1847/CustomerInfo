@@ -28,7 +28,7 @@ public class CustomerValidations {
 	}
 
 	public String validateGender(String gender) {
-		if (isGenderEmpty(gender))
+		if (isGenderNull(gender))
 			return CustomerErrorMessages.USER_GENDER;
 		return "";
 
@@ -94,11 +94,10 @@ public class CustomerValidations {
 
 		return str == null || ((String) str).trim().length() <= 2 || ((String) str).isEmpty();
 	}
-	
-	private boolean isGenderEmpty(String gender){
-		return gender.isEmpty() || gender==null;
-	}
+	private boolean isGenderNull(String str) {
 
+		return str == null;
+	}
 	private boolean isNotValidPhoneNumber(Long l) {
 
 		return String.valueOf(l).length() != 10;

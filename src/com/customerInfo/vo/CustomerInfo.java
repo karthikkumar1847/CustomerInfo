@@ -13,7 +13,7 @@ public class CustomerInfo {
 	private String firstName ;
 	private String lastName ;
 	private String middleName ;
-	private String gender;
+	private String gender ;
 	private String apt ;
 	private String city ;
 	private String state ;
@@ -61,7 +61,7 @@ public class CustomerInfo {
 	}
 
 	public void setGender(String gender) {
-		this.gender = gender;
+			this.gender = gender;
 	}
 	
 	@Column(name="aptStreet")
