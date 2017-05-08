@@ -1,0 +1,78 @@
+2017-05-07 22:34:47 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-07 22:34:47 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Sun May 07 22:34:47 PDT 2017]; root of context hierarchy
+2017-05-07 22:34:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-07 22:34:47 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 610 ms
+2017-05-07 22:34:47 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-07 22:34:47 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Sun May 07 22:34:47 PDT 2017]; parent: Root WebApplicationContext
+2017-05-07 22:34:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-07 22:34:49 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/pageEntry.go] onto handler 'customerController'
+2017-05-07 22:34:49 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/person.go] onto handler 'customerController'
+2017-05-07 22:34:49 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/bank.go] onto handler 'customerController'
+2017-05-07 22:34:49 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/contact.go] onto handler 'customerController'
+2017-05-07 22:34:49 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 1554 ms
+2017-05-07 22:35:24 INFO  CustomerController:41 - displayPerson Method executed.
+2017-05-07 22:35:46 INFO  CustomerController:63 - displayContact method executed.
+2017-05-07 22:36:22 INFO  CustomerController:84 - displayBank method executed.
+2017-05-07 22:36:41 INFO  CustomerDaoImpl:20 - Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-07 22:36:41 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-07 22:36:41 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-07 22:36:41 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-07 22:36:41 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-07 22:36:41 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-07 22:36:41 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-07 22:36:41 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-07 22:36:42 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-07 22:36:42 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-07 22:36:42 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-07 22:36:42 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-07 22:36:42 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-07 22:36:42 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-07 22:36:42 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-07 22:36:42 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-07 22:36:43 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-07 22:36:43 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-07 22:36:44 INFO  CustomerDaoImpl:28 - Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-07 22:36:44 INFO  CustomerController:105 - displayOutput method executed.
+2017-05-07 22:40:16 INFO  CustomerController:41 - displayPerson Method executed.
+2017-05-07 22:40:40 INFO  CustomerController:63 - displayContact method executed.
+2017-05-07 22:41:13 INFO  CustomerController:84 - displayBank method executed.
+2017-05-07 22:43:34 INFO  CustomerDaoImpl:20 - Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-07 22:43:34 INFO  CustomerDaoImpl:28 - Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-07 22:43:34 INFO  CustomerController:105 - displayOutput method executed.
+2017-05-07 22:46:21 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-07 22:46:21 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Sun May 07 22:46:21 PDT 2017]; root of context hierarchy
+2017-05-07 22:46:21 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-07 22:46:21 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 675 ms
+2017-05-07 22:46:22 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-07 22:46:22 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Sun May 07 22:46:22 PDT 2017]; parent: Root WebApplicationContext
+2017-05-07 22:46:22 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-07 22:46:22 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/pageEntry.go] onto handler 'customerController'
+2017-05-07 22:46:22 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/person.go] onto handler 'customerController'
+2017-05-07 22:46:22 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/bank.go] onto handler 'customerController'
+2017-05-07 22:46:22 INFO  DefaultAnnotationHandlerMapping:354 - Mapped URL path [/contact.go] onto handler 'customerController'
+2017-05-07 22:46:23 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 1159 ms
+2017-05-07 22:46:28 INFO  CustomerController:41 - displayPerson Method executed.
+2017-05-07 22:47:28 INFO  CustomerController:63 - displayContact method executed.
+2017-05-07 22:47:55 INFO  CustomerController:84 - displayBank method executed.
+2017-05-07 22:48:15 INFO  CustomerDaoImpl:20 - Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-07 22:48:15 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-07 22:48:15 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-07 22:48:15 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-07 22:48:15 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-07 22:48:15 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-07 22:48:15 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-07 22:48:15 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-07 22:48:15 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-07 22:48:15 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-07 22:48:15 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-07 22:48:15 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-07 22:48:15 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-07 22:48:15 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-07 22:48:16 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-07 22:48:16 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-07 22:48:16 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-07 22:48:16 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-07 22:48:17 WARN  SqlExceptionHelper:144 - SQL Error: 0, SQLState: 22001
+2017-05-07 22:48:17 ERROR SqlExceptionHelper:146 - Data truncation: Data too long for column 'bankName' at row 1
+2017-05-07 22:48:17 INFO  AbstractBatchImpl:208 - HHH000010: On release of batch it still contained JDBC statements
+2017-05-07 22:48:17 INFO  CustomerController:105 - displayOutput method executed.

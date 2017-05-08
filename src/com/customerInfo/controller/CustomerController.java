@@ -21,7 +21,7 @@ import com.customerInfo.vo.CustomerInfo;
 @Controller
 @SessionAttributes("cinfo")
 public class CustomerController {
-	private static Logger logger=Logger.getLogger("CustomerController");
+	private static Logger logger=Logger.getLogger(CustomerController.class);
 	
 	@Autowired
 	private CustomerBo customerBo = null;
@@ -32,15 +32,13 @@ public class CustomerController {
 	
 	@RequestMapping(value="/pageEntry.go")//method = RequestMethod.GET)
 	public String displayPerson(Model model){
-		PropertyConfigurator.configure("log4j.properties");
-		 logger.info("Starting of CustomerController: displayPerson(Model model)");
 		 System.out.println("Starting of CustomerController: displayPerson(Model model)");
 		
 		CustomerInfo cinfo = new CustomerInfo();
 		model.addAttribute("cinfo",cinfo);
 		
 		System.out.println("Completed CustomerController: displayPerson(Model model)");
-		logger.info("Completed CustomerController: displayPerson(Model model)");
+		logger.info("displayPerson Method executed.");
 		
 		return "person";
 	}
@@ -62,6 +60,7 @@ public class CustomerController {
 			mv.addObject("errors", errors);
 			return mv;
 		}
+		logger.info("displayContact method executed.");
 		ModelAndView mv = new ModelAndView("contact");
 		return mv;
 	}
@@ -82,6 +81,7 @@ public class CustomerController {
 			mv.addObject("errors", errors);
 			return mv;
 		}
+		logger.info("displayBank method executed.");
 		ModelAndView mv = new ModelAndView("bank");
 		return mv;
 	}
@@ -102,6 +102,7 @@ public class CustomerController {
 			mv.addObject("errors", errors);
 			return mv;
 		}
+		logger.info("displayOutput method executed.");
 		ModelAndView mv = new ModelAndView("success");
 		return mv;
 	}
