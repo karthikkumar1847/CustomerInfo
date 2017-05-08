@@ -15,7 +15,7 @@ import com.customerInfo.validation.CustomerValidationException;
 import com.customerInfo.vo.CustomerInfo;
 
 /**
- * @author Karthik
+ * @author Karthik Kumar
  *
  */
 @Controller
