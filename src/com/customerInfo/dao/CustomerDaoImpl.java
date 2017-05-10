@@ -1,11 +1,11 @@
 package com.customerInfo.dao;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
-
 import com.customerInfo.util.HibernateConnector;
 import com.customerInfo.vo.CustomerInfo;
 
@@ -35,11 +35,17 @@ public class CustomerDaoImpl implements CustomerDao{
 	}
 
 	@Override
-	public CustomerInfo getCustomer(CustomerInfo customerInfo) {
+	public List<CustomerInfo> getCustomers() {
 		System.out.println("Starting of CustomerDaoImpl: getCustomer(CustomerInfo customerInfo)");
+		Session session = HibernateConnector.getInstance().getSession();
+		Transaction tx = session.beginTransaction();
+		List<CustomerInfo> list = session.createCriteria(CustomerInfo.class).list();
+		//List<CustomerInfo> list = (List<CustomerInfo>)session.createSQLQuery("SELECT * FROM customerinfotable")
+		//			.addEntity(CustomerInfo.class).list();
+		tx.commit();
+		session.close();
 		System.out.println("Completed CustomerDaoImpl: getCustomer(CustomerInfo customerInfo)");
-	
-		return null;
+		return list;
 	}
 
 	@Override

@@ -1,13 +1,14 @@
 package com.customerInfo.controller;
 
+import java.util.List;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 import com.customerInfo.bo.CustomerBo;
@@ -105,5 +106,10 @@ public class CustomerController {
 		logger.info("displayOutput method executed.");
 		ModelAndView mv = new ModelAndView("success");
 		return mv;
+	}
+	
+	@RequestMapping(value = "/getCustomers.go",method = RequestMethod.GET, produces = "application/json")
+	public @ResponseBody List<CustomerInfo> getCustomers() throws CustomerValidationException, Exception{
+		return customerBo.getCustomers();	
 	}
 }

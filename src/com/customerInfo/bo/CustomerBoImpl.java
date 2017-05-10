@@ -1,5 +1,7 @@
 package com.customerInfo.bo;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -82,10 +84,11 @@ public class CustomerBoImpl implements CustomerBo {
 	}
 
 	@Override
-	public CustomerInfo getCustomer(CustomerInfo customerInfo) throws CustomerValidationException, Exception {
+	public List<CustomerInfo> getCustomers() throws CustomerValidationException, Exception {
 		System.out.println("Starting of CustomerBoImpl: getCustomer(CustomerInfo customerInfo)");
+		
 		System.out.println("Completed CustomerBoImpl: getCustomer(CustomerInfo customerInfo)");
-		return null;
+		return customerDao.getCustomers();
 	}
 
 	@Override
