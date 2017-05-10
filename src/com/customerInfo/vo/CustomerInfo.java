@@ -4,9 +4,10 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name="customerinfotable")
+@Table(name="customerinfotable",uniqueConstraints = {@UniqueConstraint(columnNames = {"actno"})})
 public class CustomerInfo {
 
 	
@@ -118,7 +119,7 @@ public class CustomerInfo {
 		this.bankName = bankName;
 	}
 
-	@Column(name="actno")
+	@Column(name="actno", unique=true)
 	public String getAccountNumber() {
 		return accountNumber;
 	}

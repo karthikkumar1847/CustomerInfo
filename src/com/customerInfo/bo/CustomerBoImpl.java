@@ -77,20 +77,28 @@ public class CustomerBoImpl implements CustomerBo {
 	}
 
 	@Override
-	public void updateCustomer(CustomerInfo customerInfo) throws CustomerValidationException, Exception {
-		
-		System.out.println("Starting of CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
-		System.out.println("Completed CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
+	public List<CustomerInfo> getCustomer(String actno) throws CustomerValidationException, Exception{
+		System.out.println("Completed CustomerBoImpl: getCustomer(String actno)");
+		System.out.println("Completed CustomerBoImpl: getCustomer(String actno)");
+		return customerDao.getCustomer(actno);
 	}
 
 	@Override
 	public List<CustomerInfo> getCustomers() throws CustomerValidationException, Exception {
-		System.out.println("Starting of CustomerBoImpl: getCustomer(CustomerInfo customerInfo)");
+		System.out.println("Starting of CustomerBoImpl: getCustomers()");
 		
-		System.out.println("Completed CustomerBoImpl: getCustomer(CustomerInfo customerInfo)");
+		System.out.println("Completed CustomerBoImpl: getCustomers()");
 		return customerDao.getCustomers();
 	}
 
+	@Override
+	public CustomerInfo updateCustomer(CustomerInfo customerInfo) throws CustomerValidationException, Exception {
+		
+		System.out.println("Starting of CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
+		System.out.println("Completed CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
+		return customerInfo;
+	}
+	
 	@Override
 	public CustomerInfo deleteCustomer(String ssn) throws CustomerValidationException, Exception {
 		System.out.println("Starting of CustomerBoImpl: deleteCustomer(String ssn)");
