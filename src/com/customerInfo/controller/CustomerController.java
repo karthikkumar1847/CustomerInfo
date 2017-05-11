@@ -111,8 +111,8 @@ public class CustomerController {
 	}
 	
 	@RequestMapping(value = "/insertCustomer.go", method = RequestMethod.POST, consumes = "application/json")
-	public void insertCustomer(@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
-		 customerBo.insertCustomer(customerInfo);	
+	public String insertCustomer(@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
+		 return customerBo.insertCustomer(customerInfo);	
 	}
 	
 	@RequestMapping(value = "/{actno}/getCustomer.go",method = RequestMethod.GET, produces = "application/json")
@@ -126,8 +126,8 @@ public class CustomerController {
 	}
 	
 	@RequestMapping(value = "/{ssn}/updateCustomer.go", method = RequestMethod.PUT, consumes = "application/json")
-	public void updateCustomer(@PathVariable String ssn,@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
-		 customerBo.updateCustomer(ssn,customerInfo);	
+	public String updateCustomer(@PathVariable String ssn,@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
+		return customerBo.updateCustomer(ssn,customerInfo);	
 	}
 	
 	@RequestMapping(value = "/{ssn}/deleteCustomer.go",method = RequestMethod.DELETE)

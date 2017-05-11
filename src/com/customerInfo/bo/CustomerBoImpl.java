@@ -1,10 +1,8 @@
 package com.customerInfo.bo;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.customerInfo.dao.CustomerDao;
 import com.customerInfo.validation.CustomerValidationException;
 import com.customerInfo.validation.CustomerValidations;
@@ -77,8 +75,8 @@ public class CustomerBoImpl implements CustomerBo {
 	}
 	
 	@Override
-	public void insertCustomer(CustomerInfo customerInfo) {
-		customerDao.addCustomer(customerInfo);
+	public String insertCustomer(CustomerInfo customerInfo) {
+		return customerDao.addCustomer(customerInfo);
 	}
 
 	@Override
@@ -96,12 +94,12 @@ public class CustomerBoImpl implements CustomerBo {
 	}
 
 	@Override
-	public void updateCustomer(String ssn,CustomerInfo customerInfo) throws CustomerValidationException, Exception {
+	public String updateCustomer(String ssn,CustomerInfo customerInfo) throws CustomerValidationException, Exception {
 		
 		System.out.println("Starting of CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");
-		customerDao.updateCustomer(ssn,customerInfo);
-		System.out.println("Completed CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");
 		
+		System.out.println("Completed CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");
+		return customerDao.updateCustomer(ssn,customerInfo);
 	}
 	
 	@Override

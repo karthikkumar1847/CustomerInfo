@@ -15036,3 +15036,1208 @@ Log session start time Thu May 11 00:49:44 PDT 2017<br>
 <td>ASTQueryTranslatorFactory.java:47</td>
 <td title="Message">HHH000397: Using ASTQueryTranslatorFactory</td>
 </tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Application log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Thu May 11 01:09:01 PDT 2017<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:305</td>
+<td title="Message">Root WebApplicationContext: initialization started</td>
+</tr>
+
+<tr>
+<td>319</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing Root WebApplicationContext: startup date [Thu May 11 01:09:01 PDT 2017]; root of context hierarchy</td>
+</tr>
+
+<tr>
+<td>436</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]</td>
+</tr>
+
+<tr>
+<td>641</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:345</td>
+<td title="Message">Root WebApplicationContext: initialization completed in 631 ms</td>
+</tr>
+
+<tr>
+<td>676</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:489</td>
+<td title="Message">FrameworkServlet 'customer': initialization started</td>
+</tr>
+
+<tr>
+<td>686</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:09:02 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>687</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]</td>
+</tr>
+
+<tr>
+<td>2026</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/getCustomers.go],methods=[GET],produces=[application/json]}&quot; onto public java.util.List&lt;com.customerInfo.vo.CustomerInfo&gt; com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2029</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/person.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>2030</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/deleteCustomer.go],methods=[DELETE]}&quot; onto public java.lang.String com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2031</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/contact.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>2032</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/bank.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>2033</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/insertCustomer.go],methods=[POST],consumes=[application/json]}&quot; onto public void com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2034</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}&quot; onto public void com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2035</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{actno}/getCustomer.go],methods=[GET],produces=[application/json]}&quot; onto public com.customerInfo.vo.CustomerInfo com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2036</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/pageEntry.go],methods=[GET]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)</td>
+</tr>
+
+<tr>
+<td>2775</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:09:02 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>2937</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:09:02 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>3139</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:508</td>
+<td title="Message">FrameworkServlet 'customer': initialization completed in 2462 ms</td>
+</tr>
+
+<tr>
+<td>87976</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:982</td>
+<td title="Message">Closing WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:09:02 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>87980</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:982</td>
+<td title="Message">Closing Root WebApplicationContext: startup date [Thu May 11 01:09:01 PDT 2017]; root of context hierarchy</td>
+</tr>
+</table>
+<br>
+</body></html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Application log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Thu May 11 01:10:31 PDT 2017<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:305</td>
+<td title="Message">Root WebApplicationContext: initialization started</td>
+</tr>
+
+<tr>
+<td>298</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing Root WebApplicationContext: startup date [Thu May 11 01:10:31 PDT 2017]; root of context hierarchy</td>
+</tr>
+
+<tr>
+<td>436</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]</td>
+</tr>
+
+<tr>
+<td>763</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:345</td>
+<td title="Message">Root WebApplicationContext: initialization completed in 755 ms</td>
+</tr>
+
+<tr>
+<td>794</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:489</td>
+<td title="Message">FrameworkServlet 'customer': initialization started</td>
+</tr>
+
+<tr>
+<td>804</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:10:32 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>806</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]</td>
+</tr>
+
+<tr>
+<td>1874</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/getCustomers.go],methods=[GET],produces=[application/json]}&quot; onto public java.util.List&lt;com.customerInfo.vo.CustomerInfo&gt; com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1878</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/person.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>1879</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/deleteCustomer.go],methods=[DELETE]}&quot; onto public java.lang.String com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1879</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/contact.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>1880</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/bank.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>1881</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/insertCustomer.go],methods=[POST],consumes=[application/json]}&quot; onto public void com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1882</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}&quot; onto public void com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1882</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{actno}/getCustomer.go],methods=[GET],produces=[application/json]}&quot; onto public com.customerInfo.vo.CustomerInfo com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1883</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/pageEntry.go],methods=[GET]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)</td>
+</tr>
+
+<tr>
+<td>2468</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:10:32 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>2588</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:10:32 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>2776</td>
+<td title="ContainerBackgroundProcessor[StandardEngine[Catalina]] thread">ContainerBackgroundProcessor[StandardEngine[Catalina]]</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:508</td>
+<td title="Message">FrameworkServlet 'customer': initialization completed in 1981 ms</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Application log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Thu May 11 01:15:29 PDT 2017<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:305</td>
+<td title="Message">Root WebApplicationContext: initialization started</td>
+</tr>
+
+<tr>
+<td>301</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing Root WebApplicationContext: startup date [Thu May 11 01:15:30 PDT 2017]; root of context hierarchy</td>
+</tr>
+
+<tr>
+<td>454</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]</td>
+</tr>
+
+<tr>
+<td>666</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:345</td>
+<td title="Message">Root WebApplicationContext: initialization completed in 657 ms</td>
+</tr>
+
+<tr>
+<td>715</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:489</td>
+<td title="Message">FrameworkServlet 'customer': initialization started</td>
+</tr>
+
+<tr>
+<td>725</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:15:30 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>727</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]</td>
+</tr>
+
+<tr>
+<td>2198</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/bank.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>2201</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/insertCustomer.go],methods=[POST],consumes=[application/json]}&quot; onto public void com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2202</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{actno}/getCustomer.go],methods=[GET],produces=[application/json]}&quot; onto public com.customerInfo.vo.CustomerInfo com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2203</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/person.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>2204</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/deleteCustomer.go],methods=[DELETE]}&quot; onto public java.lang.String com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2207</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/getCustomers.go],methods=[GET],produces=[application/json]}&quot; onto public java.util.List&lt;com.customerInfo.vo.CustomerInfo&gt; com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2208</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/contact.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>2209</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/pageEntry.go],methods=[GET]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)</td>
+</tr>
+
+<tr>
+<td>2210</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}&quot; onto public java.lang.String com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>3049</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:15:30 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>3209</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:15:30 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>3526</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:508</td>
+<td title="Message">FrameworkServlet 'customer': initialization completed in 2811 ms</td>
+</tr>
+
+<tr>
+<td>47678</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="org.springframework.web.servlet.PageNotFound category">org.springframework.web.servlet.PageNotFound</td>
+<td>DispatcherServlet.java:1147</td>
+<td title="Message">No mapping found for HTTP request with URI [/CustomerInfo/postCustomer.go] in DispatcherServlet with name 'customer'</td>
+</tr>
+
+<tr>
+<td>105183</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.customerInfo.dao.CustomerDaoImpl category">com.customerInfo.dao.CustomerDaoImpl</td>
+<td>CustomerDaoImpl.java:22</td>
+<td title="Message">Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)</td>
+</tr>
+
+<tr>
+<td>105519</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.annotations.common.Version category">org.hibernate.annotations.common.Version</td>
+<td>JavaReflectionManager.java:66</td>
+<td title="Message">HCANN000001: Hibernate Commons Annotations {4.0.4.Final}</td>
+</tr>
+
+<tr>
+<td>105532</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.Version category">org.hibernate.Version</td>
+<td>Version.java:54</td>
+<td title="Message">HHH000412: Hibernate Core {4.3.5.Final}</td>
+</tr>
+
+<tr>
+<td>105538</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Environment category">org.hibernate.cfg.Environment</td>
+<td>Environment.java:239</td>
+<td title="Message">HHH000206: hibernate.properties not found</td>
+</tr>
+
+<tr>
+<td>105542</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Environment category">org.hibernate.cfg.Environment</td>
+<td>Environment.java:346</td>
+<td title="Message">HHH000021: Bytecode provider name : javassist</td>
+</tr>
+
+<tr>
+<td>105589</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Configuration category">org.hibernate.cfg.Configuration</td>
+<td>Configuration.java:2073</td>
+<td title="Message">HHH000043: Configuring from resource: /hibernate.cfg.xml</td>
+</tr>
+
+<tr>
+<td>105590</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Configuration category">org.hibernate.cfg.Configuration</td>
+<td>Configuration.java:2092</td>
+<td title="Message">HHH000040: Configuration resource: /hibernate.cfg.xml</td>
+</tr>
+
+<tr>
+<td>105643</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="org.hibernate.internal.util.xml.DTDEntityResolver category">org.hibernate.internal.util.xml.DTDEntityResolver</td>
+<td>DTDEntityResolver.java:75</td>
+<td title="Message">HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!</td>
+</tr>
+
+<tr>
+<td>105694</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Configuration category">org.hibernate.cfg.Configuration</td>
+<td>Configuration.java:2214</td>
+<td title="Message">HHH000041: Configured SessionFactory: null</td>
+</tr>
+
+<tr>
+<td>105875</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:93</td>
+<td title="Message">HHH000402: Using Hibernate built-in connection pool (not for production use!)</td>
+</tr>
+
+<tr>
+<td>105881</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:166</td>
+<td title="Message">HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]</td>
+</tr>
+
+<tr>
+<td>105881</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:175</td>
+<td title="Message">HHH000046: Connection properties: {user=root, password=****}</td>
+</tr>
+
+<tr>
+<td>105882</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:180</td>
+<td title="Message">HHH000006: Autocommit mode: false</td>
+</tr>
+
+<tr>
+<td>105885</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:102</td>
+<td title="Message">HHH000115: Hibernate connection pool size: 20 (min=1)</td>
+</tr>
+
+<tr>
+<td>106182</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.dialect.Dialect category">org.hibernate.dialect.Dialect</td>
+<td>Dialect.java:145</td>
+<td title="Message">HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect</td>
+</tr>
+
+<tr>
+<td>106201</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.internal.LobCreatorBuilder category">org.hibernate.engine.jdbc.internal.LobCreatorBuilder</td>
+<td>LobCreatorBuilder.java:97</td>
+<td title="Message">HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4</td>
+</tr>
+
+<tr>
+<td>106438</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.transaction.internal.TransactionFactoryInitiator category">org.hibernate.engine.transaction.internal.TransactionFactoryInitiator</td>
+<td>TransactionFactoryInitiator.java:62</td>
+<td title="Message">HHH000399: Using default transaction strategy (direct JDBC transactions)</td>
+</tr>
+
+<tr>
+<td>106449</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory category">org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</td>
+<td>ASTQueryTranslatorFactory.java:47</td>
+<td title="Message">HHH000397: Using ASTQueryTranslatorFactory</td>
+</tr>
+
+<tr>
+<td>107133</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="org.hibernate.engine.jdbc.spi.SqlExceptionHelper category">org.hibernate.engine.jdbc.spi.SqlExceptionHelper</td>
+<td>SqlExceptionHelper.java:144</td>
+<td title="Message">SQL Error: 1062, SQLState: 23000</td>
+</tr>
+
+<tr>
+<td>107133</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="org.hibernate.engine.jdbc.spi.SqlExceptionHelper category">org.hibernate.engine.jdbc.spi.SqlExceptionHelper</td>
+<td>SqlExceptionHelper.java:146</td>
+<td title="Message">Duplicate entry 'kp123s' for key 'PRIMARY'</td>
+</tr>
+
+<tr>
+<td>107135</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl category">org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl</td>
+<td>AbstractBatchImpl.java:208</td>
+<td title="Message">HHH000010: On release of batch it still contained JDBC statements</td>
+</tr>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Application log</title>
+<style type="text/css">
+<!--
+body, table {font-family: arial,sans-serif; font-size: x-small;}
+th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade>
+Log session start time Thu May 11 01:21:24 PDT 2017<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Category</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:305</td>
+<td title="Message">Root WebApplicationContext: initialization started</td>
+</tr>
+
+<tr>
+<td>256</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing Root WebApplicationContext: startup date [Thu May 11 01:21:25 PDT 2017]; root of context hierarchy</td>
+</tr>
+
+<tr>
+<td>354</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]</td>
+</tr>
+
+<tr>
+<td>562</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.ContextLoader category">org.springframework.web.context.ContextLoader</td>
+<td>ContextLoader.java:345</td>
+<td title="Message">Root WebApplicationContext: initialization completed in 553 ms</td>
+</tr>
+
+<tr>
+<td>609</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:489</td>
+<td title="Message">FrameworkServlet 'customer': initialization started</td>
+</tr>
+
+<tr>
+<td>620</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.context.support.XmlWebApplicationContext category">org.springframework.web.context.support.XmlWebApplicationContext</td>
+<td>AbstractApplicationContext.java:581</td>
+<td title="Message">Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:21:25 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>622</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.beans.factory.xml.XmlBeanDefinitionReader category">org.springframework.beans.factory.xml.XmlBeanDefinitionReader</td>
+<td>XmlBeanDefinitionReader.java:317</td>
+<td title="Message">Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]</td>
+</tr>
+
+<tr>
+<td>1975</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/getCustomers.go],methods=[GET],produces=[application/json]}&quot; onto public java.util.List&lt;com.customerInfo.vo.CustomerInfo&gt; com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1979</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/bank.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>1980</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}&quot; onto public java.lang.String com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1981</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/contact.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>1981</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/pageEntry.go],methods=[GET]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)</td>
+</tr>
+
+<tr>
+<td>1983</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{ssn}/deleteCustomer.go],methods=[DELETE]}&quot; onto public java.lang.String com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1984</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/{actno}/getCustomer.go],methods=[GET],produces=[application/json]}&quot; onto public com.customerInfo.vo.CustomerInfo com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>1985</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/person.go],methods=[POST]}&quot; onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)</td>
+</tr>
+
+<tr>
+<td>1986</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping</td>
+<td>AbstractHandlerMethodMapping.java:537</td>
+<td title="Message">Mapped &quot;{[/insertCustomer.go],methods=[POST],consumes=[application/json]}&quot; onto public java.lang.String com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception</td>
+</tr>
+
+<tr>
+<td>2743</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:21:25 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>2892</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter category">org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter</td>
+<td>RequestMappingHandlerAdapter.java:534</td>
+<td title="Message">Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Thu May 11 01:21:25 PDT 2017]; parent: Root WebApplicationContext</td>
+</tr>
+
+<tr>
+<td>3141</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="org.springframework.web.servlet.DispatcherServlet category">org.springframework.web.servlet.DispatcherServlet</td>
+<td>FrameworkServlet.java:508</td>
+<td title="Message">FrameworkServlet 'customer': initialization completed in 2531 ms</td>
+</tr>
+
+<tr>
+<td>106764</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.annotations.common.Version category">org.hibernate.annotations.common.Version</td>
+<td>JavaReflectionManager.java:66</td>
+<td title="Message">HCANN000001: Hibernate Commons Annotations {4.0.4.Final}</td>
+</tr>
+
+<tr>
+<td>106782</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.Version category">org.hibernate.Version</td>
+<td>Version.java:54</td>
+<td title="Message">HHH000412: Hibernate Core {4.3.5.Final}</td>
+</tr>
+
+<tr>
+<td>106788</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Environment category">org.hibernate.cfg.Environment</td>
+<td>Environment.java:239</td>
+<td title="Message">HHH000206: hibernate.properties not found</td>
+</tr>
+
+<tr>
+<td>106793</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Environment category">org.hibernate.cfg.Environment</td>
+<td>Environment.java:346</td>
+<td title="Message">HHH000021: Bytecode provider name : javassist</td>
+</tr>
+
+<tr>
+<td>106858</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Configuration category">org.hibernate.cfg.Configuration</td>
+<td>Configuration.java:2073</td>
+<td title="Message">HHH000043: Configuring from resource: /hibernate.cfg.xml</td>
+</tr>
+
+<tr>
+<td>106859</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Configuration category">org.hibernate.cfg.Configuration</td>
+<td>Configuration.java:2092</td>
+<td title="Message">HHH000040: Configuration resource: /hibernate.cfg.xml</td>
+</tr>
+
+<tr>
+<td>106914</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="org.hibernate.internal.util.xml.DTDEntityResolver category">org.hibernate.internal.util.xml.DTDEntityResolver</td>
+<td>DTDEntityResolver.java:75</td>
+<td title="Message">HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!</td>
+</tr>
+
+<tr>
+<td>106961</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.cfg.Configuration category">org.hibernate.cfg.Configuration</td>
+<td>Configuration.java:2214</td>
+<td title="Message">HHH000041: Configured SessionFactory: null</td>
+</tr>
+
+<tr>
+<td>107140</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:93</td>
+<td title="Message">HHH000402: Using Hibernate built-in connection pool (not for production use!)</td>
+</tr>
+
+<tr>
+<td>107146</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:166</td>
+<td title="Message">HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]</td>
+</tr>
+
+<tr>
+<td>107146</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:175</td>
+<td title="Message">HHH000046: Connection properties: {user=root, password=****}</td>
+</tr>
+
+<tr>
+<td>107147</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:180</td>
+<td title="Message">HHH000006: Autocommit mode: false</td>
+</tr>
+
+<tr>
+<td>107150</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl category">org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl</td>
+<td>DriverManagerConnectionProviderImpl.java:102</td>
+<td title="Message">HHH000115: Hibernate connection pool size: 20 (min=1)</td>
+</tr>
+
+<tr>
+<td>107445</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.dialect.Dialect category">org.hibernate.dialect.Dialect</td>
+<td>Dialect.java:145</td>
+<td title="Message">HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect</td>
+</tr>
+
+<tr>
+<td>107464</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.internal.LobCreatorBuilder category">org.hibernate.engine.jdbc.internal.LobCreatorBuilder</td>
+<td>LobCreatorBuilder.java:97</td>
+<td title="Message">HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4</td>
+</tr>
+
+<tr>
+<td>107766</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.transaction.internal.TransactionFactoryInitiator category">org.hibernate.engine.transaction.internal.TransactionFactoryInitiator</td>
+<td>TransactionFactoryInitiator.java:62</td>
+<td title="Message">HHH000399: Using default transaction strategy (direct JDBC transactions)</td>
+</tr>
+
+<tr>
+<td>107777</td>
+<td title="http-nio-2345-exec-3 thread">http-nio-2345-exec-3</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory category">org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory</td>
+<td>ASTQueryTranslatorFactory.java:47</td>
+<td title="Message">HHH000397: Using ASTQueryTranslatorFactory</td>
+</tr>
+
+<tr>
+<td>226147</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.customerInfo.dao.CustomerDaoImpl category">com.customerInfo.dao.CustomerDaoImpl</td>
+<td>CustomerDaoImpl.java:22</td>
+<td title="Message">Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)</td>
+</tr>
+
+<tr>
+<td>226265</td>
+<td title="http-nio-2345-exec-5 thread">http-nio-2345-exec-5</td>
+<td title="Level">INFO</td>
+<td title="com.customerInfo.dao.CustomerDaoImpl category">com.customerInfo.dao.CustomerDaoImpl</td>
+<td>CustomerDaoImpl.java:30</td>
+<td title="Message">Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)</td>
+</tr>
+
+<tr>
+<td>254675</td>
+<td title="http-nio-2345-exec-7 thread">http-nio-2345-exec-7</td>
+<td title="Level">INFO</td>
+<td title="com.customerInfo.dao.CustomerDaoImpl category">com.customerInfo.dao.CustomerDaoImpl</td>
+<td>CustomerDaoImpl.java:22</td>
+<td title="Message">Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)</td>
+</tr>
+
+<tr>
+<td>254684</td>
+<td title="http-nio-2345-exec-7 thread">http-nio-2345-exec-7</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="org.hibernate.engine.jdbc.spi.SqlExceptionHelper category">org.hibernate.engine.jdbc.spi.SqlExceptionHelper</td>
+<td>SqlExceptionHelper.java:144</td>
+<td title="Message">SQL Error: 1062, SQLState: 23000</td>
+</tr>
+
+<tr>
+<td>254685</td>
+<td title="http-nio-2345-exec-7 thread">http-nio-2345-exec-7</td>
+<td title="Level"><font color="#993300"><strong>ERROR</strong></font></td>
+<td title="org.hibernate.engine.jdbc.spi.SqlExceptionHelper category">org.hibernate.engine.jdbc.spi.SqlExceptionHelper</td>
+<td>SqlExceptionHelper.java:146</td>
+<td title="Message">Duplicate entry 'js333' for key 'PRIMARY'</td>
+</tr>
+
+<tr>
+<td>254688</td>
+<td title="http-nio-2345-exec-7 thread">http-nio-2345-exec-7</td>
+<td title="Level">INFO</td>
+<td title="org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl category">org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl</td>
+<td>AbstractBatchImpl.java:208</td>
+<td title="Message">HHH000010: On release of batch it still contained JDBC statements</td>
+</tr>

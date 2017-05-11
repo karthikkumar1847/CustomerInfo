@@ -1,7 +1,6 @@
 package com.customerInfo.dao;
 
 import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
@@ -18,7 +17,7 @@ public class CustomerDaoImpl implements CustomerDao{
 	
 	
 	@Override
-	public void addCustomer(CustomerInfo customerInfo) {
+	public String addCustomer(CustomerInfo customerInfo) {
 		//PropertyConfigurator.configure("log4j.properties");
 		 logger.info("Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
 		System.out.println("Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
@@ -29,6 +28,7 @@ public class CustomerDaoImpl implements CustomerDao{
 		session.close();
 		System.out.println("Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
 		logger.info("Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)");
+		return "Inserted!";
 	}
 
 	@Override
@@ -61,16 +61,22 @@ public class CustomerDaoImpl implements CustomerDao{
 		return list;
 	}
 	
+	@SuppressWarnings("finally")
 	@Override
-	public void updateCustomer(String ssn,CustomerInfo customerInfo) {
+	public String updateCustomer(String ssn,CustomerInfo customerInfo) {
 		System.out.println("Starting of CustomerDaoImpl: updateCustomer(String actno, CustomerInfo customerInfo)");
+		String res="";
 		Session session = HibernateConnector.getInstance().getSession();
 		  Transaction tx = null;
 	      try{
 	         tx = session.beginTransaction();
-	         CustomerInfo update = 
-	                    (CustomerInfo)session.load(CustomerInfo.class, ssn);
-	       // CustomerInfo update = getCustomer(actno);
+	        /* CustomerInfo update = 
+	                    (CustomerInfo)session.load(CustomerInfo.class, ssn);*/
+	 		Criteria cr = session.createCriteria(CustomerInfo.class);
+			cr.add(Restrictions.eq("ssn", ssn));
+			List<CustomerInfo> list = cr.list();
+	        CustomerInfo update = list.get(0);
+	        if(update.getSsn().equals(ssn)){
 	        update.setFirstName(customerInfo.getFirstName());
 	 		update.setMiddleName(customerInfo.getMiddleName());
 	 		update.setLastName(customerInfo.getLastName());
@@ -85,13 +91,16 @@ public class CustomerDaoImpl implements CustomerDao{
 	 		update.setSsn(customerInfo.getSsn());
 	        session.update(update); 
 	         tx.commit();
+	         res = "Successfully Updated.";
+	        }else res = "Not Updated.";
 	      }catch (HibernateException e) {
 	         if (tx!=null) tx.rollback();
 	         e.printStackTrace(); 
 	      }finally {
 	         session.close(); 
-	      }
-		System.out.println("Completed CustomerDaoImpl: updateCustomer(String actno, CustomerInfo customerInfo)");
+	         System.out.println("Completed CustomerDaoImpl: updateCustomer(String actno, CustomerInfo customerInfo)");
+	         return res;
+	      }		
 	}
 
 	@SuppressWarnings("finally")
@@ -109,7 +118,7 @@ public class CustomerDaoImpl implements CustomerDao{
 	     if(customer.getSsn().equals(ssn)){
 	    	 session.delete(customer); 
 	    	 tx.commit();
-	    	 res = "Successfully Deleted";
+	    	 res = "Successfully Deleted.";
 	     }else{
 	       	 res =  "No Account Found.";
 	     }
