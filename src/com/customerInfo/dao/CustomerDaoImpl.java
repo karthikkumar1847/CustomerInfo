@@ -70,12 +70,12 @@ public class CustomerDaoImpl implements CustomerDao{
 		  Transaction tx = null;
 	      try{
 	         tx = session.beginTransaction();
-	        /* CustomerInfo update = 
-	                    (CustomerInfo)session.load(CustomerInfo.class, ssn);*/
-	 		Criteria cr = session.createCriteria(CustomerInfo.class);
+	        CustomerInfo update = 
+	                   (CustomerInfo)session.load(CustomerInfo.class, ssn);
+	 		/*Criteria cr = session.createCriteria(CustomerInfo.class);
 			cr.add(Restrictions.eq("ssn", ssn));
 			List<CustomerInfo> list = cr.list();
-	        CustomerInfo update = list.get(0);
+	        CustomerInfo update = list.get(0);*/
 	        if(update.getSsn().equals(ssn)){
 	        update.setFirstName(customerInfo.getFirstName());
 	 		update.setMiddleName(customerInfo.getMiddleName());
