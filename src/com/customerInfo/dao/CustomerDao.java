@@ -7,8 +7,8 @@ import com.customerInfo.vo.CustomerInfo;
 public interface CustomerDao {
 
 	public void addCustomer(CustomerInfo customerInfo);
-	public List<CustomerInfo> getCustomer(String actno);
+	public CustomerInfo getCustomer(String actno);
 	public List<CustomerInfo> getCustomers();
-	public void updateCustomer(CustomerInfo customerInfo);
-	public CustomerInfo deleteCustomer(String actno);
+	public void updateCustomer(String actno,CustomerInfo customerInfo);
+	public String deleteCustomer(String actno);
 }

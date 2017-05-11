@@ -75,9 +75,14 @@ public class CustomerBoImpl implements CustomerBo {
 		System.out.println("Completed CustomerBoImpl: addCustomerBankInfo(CustomerInfo customerInfo)");
 	
 	}
+	
+	@Override
+	public void insertCustomer(CustomerInfo customerInfo) {
+		customerDao.addCustomer(customerInfo);
+	}
 
 	@Override
-	public List<CustomerInfo> getCustomer(String actno) throws CustomerValidationException, Exception{
+	public CustomerInfo getCustomer(String actno) throws CustomerValidationException, Exception{
 		System.out.println("Completed CustomerBoImpl: getCustomer(String actno)");
 		System.out.println("Completed CustomerBoImpl: getCustomer(String actno)");
 		return customerDao.getCustomer(actno);
@@ -86,24 +91,24 @@ public class CustomerBoImpl implements CustomerBo {
 	@Override
 	public List<CustomerInfo> getCustomers() throws CustomerValidationException, Exception {
 		System.out.println("Starting of CustomerBoImpl: getCustomers()");
-		
 		System.out.println("Completed CustomerBoImpl: getCustomers()");
 		return customerDao.getCustomers();
 	}
 
 	@Override
-	public CustomerInfo updateCustomer(CustomerInfo customerInfo) throws CustomerValidationException, Exception {
+	public void updateCustomer(String ssn,CustomerInfo customerInfo) throws CustomerValidationException, Exception {
 		
-		System.out.println("Starting of CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
-		System.out.println("Completed CustomerBoImpl: updateCustomer(CustomerInfo customerInfo)");
-		return customerInfo;
+		System.out.println("Starting of CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");
+		customerDao.updateCustomer(ssn,customerInfo);
+		System.out.println("Completed CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");
+		
 	}
 	
 	@Override
-	public CustomerInfo deleteCustomer(String ssn) throws CustomerValidationException, Exception {
+	public String deleteCustomer(String ssn) throws CustomerValidationException, Exception {
 		System.out.println("Starting of CustomerBoImpl: deleteCustomer(String ssn)");
 		System.out.println("Completed CustomerBoImpl: deleteCustomer(String ssn)");
-		return null;
+		return customerDao.deleteCustomer(ssn);
 	}
 
 }

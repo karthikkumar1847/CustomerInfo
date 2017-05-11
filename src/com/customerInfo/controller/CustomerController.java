@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -109,8 +110,13 @@ public class CustomerController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "/insertCustomer.go", method = RequestMethod.POST, consumes = "application/json")
+	public void insertCustomer(@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
+		 customerBo.insertCustomer(customerInfo);	
+	}
+	
 	@RequestMapping(value = "/{actno}/getCustomer.go",method = RequestMethod.GET, produces = "application/json")
-	public List<CustomerInfo> getCustomer(@PathVariable String actno) throws CustomerValidationException, Exception{
+	public CustomerInfo getCustomer(@PathVariable String actno) throws CustomerValidationException, Exception{
 		return customerBo.getCustomer(actno);	
 	}
 	
@@ -119,13 +125,14 @@ public class CustomerController {
 		return customerBo.getCustomers();	
 	}
 	
-	@RequestMapping(value = "/{actno}/deleteCustomer.go",method = RequestMethod.DELETE, produces = "application/json")
-	public CustomerInfo deleteCustomer(@PathVariable String actno) throws CustomerValidationException, Exception{
-		return null;	
+	@RequestMapping(value = "/{ssn}/updateCustomer.go", method = RequestMethod.PUT, consumes = "application/json")
+	public void updateCustomer(@PathVariable String ssn,@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
+		 customerBo.updateCustomer(ssn,customerInfo);	
 	}
 	
-	@RequestMapping(value = "/editCustomer.go",method = RequestMethod.PUT, consumes = "application/json")
-	public CustomerInfo updateCustomer(CustomerInfo customerInfo) throws CustomerValidationException, Exception{
-		return customerBo.updateCustomer(customerInfo);	
+	@RequestMapping(value = "/{ssn}/deleteCustomer.go",method = RequestMethod.DELETE)
+	public String deleteCustomer(@PathVariable String ssn) throws CustomerValidationException, Exception{
+		return customerBo.deleteCustomer(ssn);	
 	}
+	
 }
