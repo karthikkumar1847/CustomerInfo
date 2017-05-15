@@ -3040,6 +3040,8 @@ Caused by: java.lang.NullPointerException
 2017-05-15 01:48:53 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-05-15 01:48:53 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 2017-05-15 02:04:23 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
 2017-05-15 02:04:24 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 02:04:24 PDT 2017]; root of context hierarchy
 2017-05-15 02:04:24 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
@@ -3248,3 +3250,4 @@ Caused by: java.lang.NullPointerException
 2017-05-15 09:31:08 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
 2017-05-15 09:31:08 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
 2017-05-15 09:31:08 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+>>>>>>> refs/remotes/origin/Customerinfo-branch1

@@ -160,7 +160,7 @@ public class CustomerController {
 		else
 			return new ResponseEntity<ListCustomerInfo>(HttpStatus.NOT_FOUND);
 	}
-	
+
 	@RequestMapping(value = "/{ssn}/updateCustomer.go", method = RequestMethod.PUT, consumes = {"application/json","application/xml"})
 	public ResponseEntity<CustomerInfo> updateCustomer(@PathVariable String ssn,@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
 		String s = customerBo.updateCustomer(ssn,customerInfo);	
