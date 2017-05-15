@@ -96,8 +96,7 @@ public class CustomerBoImpl implements CustomerBo {
 	@Override
 	public String updateCustomer(String ssn,CustomerInfo customerInfo) throws CustomerValidationException, Exception {
 		
-		System.out.println("Starting of CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");
-		
+		System.out.println("Starting of CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");	
 		System.out.println("Completed CustomerBoImpl: updateCustomer(String ssn, CustomerInfo customerInfo)");
 		return customerDao.updateCustomer(ssn,customerInfo);
 	}

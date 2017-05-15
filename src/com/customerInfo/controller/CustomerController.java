@@ -3,6 +3,8 @@ package com.customerInfo.controller;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -111,28 +113,48 @@ public class CustomerController {
 	}
 	
 	@RequestMapping(value = "/insertCustomer.go", method = RequestMethod.POST, consumes = "application/json")
-	public String insertCustomer(@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
-		 return customerBo.insertCustomer(customerInfo);	
+	public ResponseEntity<CustomerInfo> insertCustomer(@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
+		 String s =  customerBo.insertCustomer(customerInfo);	
+		 if(s.equals("success"))
+				return new ResponseEntity<CustomerInfo>(HttpStatus.CREATED);
+			else
+				return new ResponseEntity<CustomerInfo>(HttpStatus.FOUND);
 	}
 	
 	@RequestMapping(value = "/{actno}/getCustomer.go",method = RequestMethod.GET, produces = "application/json")
-	public CustomerInfo getCustomer(@PathVariable String actno) throws CustomerValidationException, Exception{
-		return customerBo.getCustomer(actno);	
+	public ResponseEntity<CustomerInfo> getCustomer(@PathVariable String actno) throws CustomerValidationException, Exception{
+		CustomerInfo customerInfo = customerBo.getCustomer(actno);	
+		if(customerInfo != null)
+			return new ResponseEntity<CustomerInfo>(customerInfo,HttpStatus.OK);
+		else
+			return new ResponseEntity<CustomerInfo>(HttpStatus.NOT_FOUND);
 	}
 	
-	@RequestMapping(value = "/getCustomers.go",method = RequestMethod.GET, produces = "application/json")
-	public List<CustomerInfo> getCustomers() throws CustomerValidationException, Exception{
-		return customerBo.getCustomers();	
+	@RequestMapping(value = "/getAllCustomers.go",method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<List<CustomerInfo>> getCustomers() throws CustomerValidationException, Exception{
+		List<CustomerInfo> list =  customerBo.getCustomers();	
+		if(!list.isEmpty())
+			return new ResponseEntity<List<CustomerInfo>>(list,HttpStatus.OK);
+		else
+			return new ResponseEntity<List<CustomerInfo>>(HttpStatus.NOT_FOUND);
 	}
 	
 	@RequestMapping(value = "/{ssn}/updateCustomer.go", method = RequestMethod.PUT, consumes = "application/json")
-	public String updateCustomer(@PathVariable String ssn,@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
-		return customerBo.updateCustomer(ssn,customerInfo);	
+	public ResponseEntity<CustomerInfo> updateCustomer(@PathVariable String ssn,@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
+		String s = customerBo.updateCustomer(ssn,customerInfo);	
+		if(s.equals("success"))
+			return new ResponseEntity<CustomerInfo>(HttpStatus.OK);
+		else
+			return new ResponseEntity<CustomerInfo>(HttpStatus.NOT_FOUND);
 	}
 	
 	@RequestMapping(value = "/{ssn}/deleteCustomer.go",method = RequestMethod.DELETE)
-	public String deleteCustomer(@PathVariable String ssn) throws CustomerValidationException, Exception{
-		return customerBo.deleteCustomer(ssn);	
+	public ResponseEntity<CustomerInfo> deleteCustomer(@PathVariable String ssn) throws CustomerValidationException, Exception{
+		String s = customerBo.deleteCustomer(ssn);
+		if(s.equals("success"))
+			return new ResponseEntity<CustomerInfo>(HttpStatus.OK);
+		else
+			return new ResponseEntity<CustomerInfo>(HttpStatus.NOT_FOUND);
 	}
 	
 }
