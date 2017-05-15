@@ -1,27 +1,52 @@
 package com.customerInfo.vo;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name="customerinfotable",uniqueConstraints = {@UniqueConstraint(columnNames = {"actno"})})
-public class CustomerInfo {
+@XmlRootElement(name="customer")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class CustomerInfo implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
+	@XmlElement
 	private String firstName ;
+	@XmlElement
 	private String lastName ;
+	@XmlElement
 	private String middleName ;
+	@XmlElement
 	private String gender ;
+	@XmlElement
 	private String apt ;
+	@XmlElement
 	private String city ;
+	@XmlElement
 	private String state ;
+	@XmlElement
 	private String country;
+	@XmlElement
 	private Long phoneNumber ;
+	@XmlElement
 	private String bankName;
+	@XmlElement
 	private String accountNumber ;
+	@XmlAttribute
 	private String ssn ;
 	
 	public CustomerInfo() {

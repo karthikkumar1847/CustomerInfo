@@ -1,7 +1,6 @@
 package com.customerInfo.bo;
 
 import java.util.List;
-
 import com.customerInfo.validation.CustomerValidationException;
 import com.customerInfo.vo.CustomerInfo;
 

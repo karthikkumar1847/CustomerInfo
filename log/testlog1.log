@@ -2358,3 +2358,729 @@ Caused by: java.lang.NullPointerException
 2017-05-14 23:49:56 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
 2017-05-14 23:49:56 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
 2017-05-14 23:49:56 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-14 23:59:03 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-14 23:59:03 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Sun May 14 23:59:03 PDT 2017]; root of context hierarchy
+2017-05-14 23:59:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-14 23:59:03 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 607 ms
+2017-05-14 23:59:03 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-14 23:59:03 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Sun May 14 23:59:03 PDT 2017]; parent: Root WebApplicationContext
+2017-05-14 23:59:03 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-14 23:59:05 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-14 23:59:06 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Sun May 14 23:59:03 PDT 2017]; parent: Root WebApplicationContext
+2017-05-14 23:59:06 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Sun May 14 23:59:03 PDT 2017]; parent: Root WebApplicationContext
+2017-05-14 23:59:06 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2920 ms
+2017-05-14 23:59:14 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-14 23:59:14 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-14 23:59:14 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-14 23:59:14 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-14 23:59:14 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-14 23:59:14 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-14 23:59:14 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-14 23:59:14 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-14 23:59:14 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-14 23:59:14 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-14 23:59:14 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-14 23:59:14 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-14 23:59:14 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-14 23:59:15 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-14 23:59:15 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-14 23:59:15 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-14 23:59:15 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:02:25 WARN  PageNotFound:210 - Request method 'PUT' not supported
+2017-05-15 00:04:22 INFO  CustomerDaoImpl:21 - Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-15 00:04:22 INFO  CustomerDaoImpl:39 - Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-15 00:08:38 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:08:38 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:08:38 PDT 2017]; root of context hierarchy
+2017-05-15 00:08:38 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:08:39 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 623 ms
+2017-05-15 00:08:39 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:08:39 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:08:39 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:08:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:08:40 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:08:41 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:08:39 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:08:41 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:08:39 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:08:41 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2375 ms
+2017-05-15 00:08:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:08:49 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:08:49 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:08:49 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:08:49 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:08:49 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:08:49 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:08:49 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:08:49 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:08:49 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:08:49 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:08:49 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:08:49 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:08:50 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:08:50 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:08:50 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:08:50 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:14:30 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:14:30 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:14:30 PDT 2017]; root of context hierarchy
+2017-05-15 00:14:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:14:31 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 603 ms
+2017-05-15 00:14:31 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:14:31 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:14:31 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:14:31 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:14:32 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:14:33 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:14:31 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:14:33 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:14:31 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:14:33 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2422 ms
+2017-05-15 00:14:44 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:14:44 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:14:44 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:14:44 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:14:44 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:14:44 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:14:44 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:14:44 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:14:45 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:14:45 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:14:45 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:14:45 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:14:45 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:14:45 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:14:45 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:14:45 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:14:45 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:17:44 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:17:44 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:17:44 PDT 2017]; root of context hierarchy
+2017-05-15 00:17:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:17:44 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 629 ms
+2017-05-15 00:17:44 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:17:44 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:17:44 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:17:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:17:45 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:17:46 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:17:44 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:17:46 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:17:44 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:17:46 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2099 ms
+2017-05-15 00:18:00 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:18:00 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:18:00 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:18:00 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:18:00 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:18:00 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:18:00 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:18:00 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:18:00 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:18:00 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:18:00 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:18:00 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:18:00 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:18:01 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:18:01 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:18:01 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:18:01 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:20:07 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:17:44 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:20:07 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 00:17:44 PDT 2017]; root of context hierarchy
+2017-05-15 00:20:09 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:20:09 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:20:09 PDT 2017]; root of context hierarchy
+2017-05-15 00:20:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:20:10 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 445 ms
+2017-05-15 00:20:10 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:20:10 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:20:10 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:20:10 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:20:11 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:20:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:20:10 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:20:11 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:20:10 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:20:11 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 1795 ms
+2017-05-15 00:20:17 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:20:17 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:20:17 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:20:17 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:20:17 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:20:17 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:20:17 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:20:17 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:20:17 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:20:17 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:20:17 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:20:17 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:20:17 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:20:18 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:20:18 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:20:18 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:20:18 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:22:25 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:22:26 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:22:26 PDT 2017]; root of context hierarchy
+2017-05-15 00:22:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:22:26 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 578 ms
+2017-05-15 00:22:26 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:22:26 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:22:26 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:22:26 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:22:27 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:22:28 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:22:26 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:22:28 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:22:26 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:22:28 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2369 ms
+2017-05-15 00:22:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:22:36 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:22:36 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:22:36 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:22:36 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:22:36 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:22:36 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:22:36 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:22:36 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:22:36 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:22:36 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:22:36 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:22:36 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:22:37 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:22:37 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:22:37 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:22:37 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:25:16 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:22:26 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:25:16 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 00:22:26 PDT 2017]; root of context hierarchy
+2017-05-15 00:25:18 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:25:18 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:25:18 PDT 2017]; root of context hierarchy
+2017-05-15 00:25:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:25:18 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 484 ms
+2017-05-15 00:25:18 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:25:18 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:25:18 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:25:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:25:20 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:25:20 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:25:18 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:25:20 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:25:18 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:25:21 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2091 ms
+2017-05-15 00:25:29 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:25:29 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:25:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:25:29 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:25:29 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:25:29 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:25:29 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:25:29 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:25:30 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:25:30 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:25:30 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:25:30 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:25:30 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:25:30 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:25:30 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:25:30 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:25:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:26:51 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:25:18 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:26:51 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 00:25:18 PDT 2017]; root of context hierarchy
+2017-05-15 00:26:53 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:26:54 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:26:54 PDT 2017]; root of context hierarchy
+2017-05-15 00:26:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:26:54 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 679 ms
+2017-05-15 00:26:54 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:26:54 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:26:54 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:26:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:26:55 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:26:56 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:26:54 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:26:56 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:26:54 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:26:56 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 1926 ms
+2017-05-15 00:26:57 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:26:54 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:26:57 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 00:26:54 PDT 2017]; root of context hierarchy
+2017-05-15 00:27:13 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:27:14 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:27:14 PDT 2017]; root of context hierarchy
+2017-05-15 00:27:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:27:14 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 741 ms
+2017-05-15 00:27:14 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:27:14 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:27:14 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:27:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:27:16 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:27:17 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:27:14 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:27:17 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:27:14 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:27:17 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2971 ms
+2017-05-15 00:27:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:27:25 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:27:25 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:27:25 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:27:25 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:27:25 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:27:25 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:27:25 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:27:26 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:27:26 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:27:26 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:27:26 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:27:26 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:27:26 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:27:26 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:27:26 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:27:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:28:11 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:27:14 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:28:11 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 00:27:14 PDT 2017]; root of context hierarchy
+2017-05-15 00:28:13 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:28:14 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:28:14 PDT 2017]; root of context hierarchy
+2017-05-15 00:28:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:28:14 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 629 ms
+2017-05-15 00:28:14 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:28:14 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:28:14 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:28:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:28:16 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:28:14 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:28:16 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:28:14 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:28:16 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2299 ms
+2017-05-15 00:28:23 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:28:23 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:28:23 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:28:23 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:28:23 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:28:23 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:28:23 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:28:23 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:28:23 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:28:23 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:28:23 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:28:23 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:28:23 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:28:23 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:28:23 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:28:24 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:28:24 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 00:41:16 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 00:41:16 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 00:41:16 PDT 2017]; root of context hierarchy
+2017-05-15 00:41:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 00:41:16 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 658 ms
+2017-05-15 00:41:16 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 00:41:16 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:41:16 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:41:16 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:41:18 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 00:41:19 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:41:16 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:41:19 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 00:41:16 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 00:41:19 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2821 ms
+2017-05-15 00:41:27 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 00:41:27 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 00:41:27 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 00:41:27 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 00:41:27 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 00:41:27 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 00:41:27 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 00:41:27 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 00:41:28 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 00:41:28 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 00:41:28 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 00:41:28 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 00:41:28 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 00:41:28 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 00:41:28 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 00:41:28 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 00:41:28 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 01:08:47 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:08:48 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:08:48 PDT 2017]; root of context hierarchy
+2017-05-15 01:08:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:08:48 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 783 ms
+2017-05-15 01:08:48 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:08:48 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:08:48 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:08:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomers() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 01:08:50 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:08:51 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:08:48 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:08:51 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:08:48 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:08:51 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2953 ms
+2017-05-15 01:09:19 WARN  PageNotFound:1147 - No mapping found for HTTP request with URI [/CustomerInfo/123455/getCustomer.go] in DispatcherServlet with name 'customer'
+2017-05-15 01:09:43 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 01:09:43 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 01:09:43 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 01:09:43 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 01:09:43 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 01:09:43 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 01:09:43 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 01:09:43 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 01:09:43 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 01:09:43 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 01:09:43 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 01:09:43 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 01:09:43 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 01:09:44 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 01:09:44 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 01:09:44 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 01:09:44 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 01:12:26 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:08:48 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:12:26 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 01:08:48 PDT 2017]; root of context hierarchy
+2017-05-15 01:12:28 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:28:12 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:28:13 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:28:13 PDT 2017]; root of context hierarchy
+2017-05-15 01:28:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:28:13 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 695 ms
+2017-05-15 01:28:13 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:28:13 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:28:13 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:28:13 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.ListCustomerInfo> com.customerInfo.controller.CustomerController.getCustomersXml() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:28:15 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:28:16 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:28:13 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:28:16 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:28:13 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:28:17 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 3455 ms
+2017-05-15 01:28:47 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 01:28:47 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 01:28:47 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 01:28:47 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 01:28:47 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 01:28:47 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 01:28:47 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 01:28:47 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 01:28:47 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 01:28:47 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 01:28:47 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 01:28:47 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 01:28:47 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 01:28:47 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 01:28:47 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 01:28:48 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 01:28:48 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 01:32:19 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:32:19 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:32:19 PDT 2017]; root of context hierarchy
+2017-05-15 01:32:19 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:32:20 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 714 ms
+2017-05-15 01:32:20 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:32:20 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:32:20 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:32:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.ListCustomerInfo> com.customerInfo.controller.CustomerController.getCustomersXml() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:32:21 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:32:22 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:32:20 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:32:22 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:32:20 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:32:23 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2961 ms
+2017-05-15 01:32:44 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 01:32:44 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 01:32:44 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 01:32:44 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 01:32:44 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 01:32:44 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 01:32:44 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 01:32:45 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 01:32:45 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 01:32:45 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 01:32:45 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 01:32:45 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 01:32:45 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 01:32:45 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 01:32:45 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 01:32:46 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 01:32:46 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 01:33:55 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:32:20 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:33:55 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 01:32:19 PDT 2017]; root of context hierarchy
+2017-05-15 01:33:58 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:33:58 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:33:58 PDT 2017]; root of context hierarchy
+2017-05-15 01:33:58 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:33:58 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 620 ms
+2017-05-15 01:33:58 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:33:58 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:33:58 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:33:58 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:34:22 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 01:33:58 PDT 2017]; root of context hierarchy
+2017-05-15 01:34:24 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:34:25 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:34:25 PDT 2017]; root of context hierarchy
+2017-05-15 01:34:25 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:34:25 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 538 ms
+2017-05-15 01:34:25 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:34:25 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:34:25 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:34:25 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:42:44 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:42:45 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:42:45 PDT 2017]; root of context hierarchy
+2017-05-15 01:42:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:42:45 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 680 ms
+2017-05-15 01:42:45 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:42:45 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:42:45 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:42:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.ListCustomerInfo> com.customerInfo.controller.CustomerController.getCustomersXml() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 01:42:47 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:42:47 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:42:45 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:42:48 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:42:45 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:42:48 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2723 ms
+2017-05-15 01:43:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 01:43:05 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 01:43:05 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 01:43:05 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 01:43:05 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 01:43:05 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 01:43:05 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 01:43:05 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 01:43:06 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 01:43:06 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 01:43:06 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 01:43:06 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 01:43:06 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 01:43:06 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 01:43:06 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 01:43:07 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 01:43:07 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 01:46:28 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:46:28 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:46:28 PDT 2017]; root of context hierarchy
+2017-05-15 01:46:28 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:46:29 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 861 ms
+2017-05-15 01:46:29 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:46:29 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:46:29 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:46:29 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.ListCustomerInfo> com.customerInfo.controller.CustomerController.getCustomersXml() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:46:30 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 01:46:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:46:29 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:46:31 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:46:29 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:46:32 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2748 ms
+2017-05-15 01:46:43 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 01:46:43 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 01:46:43 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 01:46:43 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 01:46:43 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 01:46:43 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 01:46:43 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 01:46:44 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 01:46:44 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 01:46:44 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 01:46:44 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 01:46:44 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 01:46:44 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 01:46:44 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 01:46:44 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 01:46:45 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 01:46:45 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 01:47:27 INFO  XmlWebApplicationContext:982 - Closing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:46:29 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:47:27 INFO  XmlWebApplicationContext:982 - Closing Root WebApplicationContext: startup date [Mon May 15 01:46:28 PDT 2017]; root of context hierarchy
+2017-05-15 01:47:29 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:47:29 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:47:29 PDT 2017]; root of context hierarchy
+2017-05-15 01:47:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:47:31 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 2051 ms
+2017-05-15 01:47:31 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:47:31 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:47:31 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:47:31 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.ListCustomerInfo> com.customerInfo.controller.CustomerController.getCustomersXml() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:47:33 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 01:47:34 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:47:31 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:47:34 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:47:31 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:47:34 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2568 ms
+2017-05-15 01:47:43 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 01:47:43 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 01:47:43 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 01:47:43 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 01:47:43 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 01:47:43 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 01:47:43 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 01:47:43 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 01:47:43 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 01:47:43 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 01:47:43 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 01:47:43 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 01:47:43 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 01:47:44 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 01:47:44 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 01:47:44 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 01:47:44 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 01:48:33 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 01:48:33 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 01:48:33 PDT 2017]; root of context hierarchy
+2017-05-15 01:48:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 01:48:33 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 674 ms
+2017-05-15 01:48:33 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 01:48:33 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:48:33 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:48:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.ListCustomerInfo> com.customerInfo.controller.CustomerController.getCustomersXml() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:48:35 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 01:48:36 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:48:33 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:48:36 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 01:48:33 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 01:48:36 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2563 ms
+2017-05-15 01:48:46 WARN  PageNotFound:1147 - No mapping found for HTTP request with URI [/CustomerInfo/123455/getCustomer.go] in DispatcherServlet with name 'customer'
+2017-05-15 01:48:52 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 01:48:52 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 01:48:52 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 01:48:52 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 01:48:52 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 01:48:52 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 01:48:52 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 01:48:52 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 01:48:52 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 01:48:52 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 01:48:52 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 01:48:52 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 01:48:52 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 01:48:53 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 01:48:53 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 01:48:53 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 01:48:53 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 02:04:23 INFO  ContextLoader:305 - Root WebApplicationContext: initialization started
+2017-05-15 02:04:24 INFO  XmlWebApplicationContext:581 - Refreshing Root WebApplicationContext: startup date [Mon May 15 02:04:24 PDT 2017]; root of context hierarchy
+2017-05-15 02:04:24 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+2017-05-15 02:04:24 INFO  ContextLoader:345 - Root WebApplicationContext: initialization completed in 670 ms
+2017-05-15 02:04:24 INFO  DispatcherServlet:489 - FrameworkServlet 'customer': initialization started
+2017-05-15 02:04:24 INFO  XmlWebApplicationContext:581 - Refreshing WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 02:04:24 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 02:04:24 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/customer-servlet.xml]
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/insertCustomer.go],methods=[POST],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.insertCustomer(com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/updateCustomer.go],methods=[PUT],consumes=[application/json || application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.updateCustomer(java.lang.String,com.customerInfo.vo.CustomerInfo) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{ssn}/deleteCustomer.go],methods=[DELETE]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.deleteCustomer(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/person.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayContact(com.customerInfo.vo.CustomerInfo)
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/contact.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayBank(com.customerInfo.vo.CustomerInfo)
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.customerInfo.vo.CustomerInfo>> com.customerInfo.controller.CustomerController.getCustomersJson() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerXml(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/bank.go],methods=[POST]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayOutput(com.customerInfo.vo.CustomerInfo)
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/getAllCustomers/xml.go],methods=[GET],produces=[application/xml]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.ListCustomerInfo> com.customerInfo.controller.CustomerController.getCustomersXml() throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/{actno}/getCustomer/json.go],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.customerInfo.vo.CustomerInfo> com.customerInfo.controller.CustomerController.getCustomerJson(java.lang.String) throws com.customerInfo.validation.CustomerValidationException,java.lang.Exception
+2017-05-15 02:04:26 INFO  RequestMappingHandlerMapping:537 - Mapped "{[/pageEntry.go],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.customerInfo.controller.CustomerController.displayPerson(org.springframework.ui.Model)
+2017-05-15 02:04:26 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 02:04:24 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 02:04:27 INFO  RequestMappingHandlerAdapter:534 - Looking for @ControllerAdvice: WebApplicationContext for namespace 'customer-servlet': startup date [Mon May 15 02:04:24 PDT 2017]; parent: Root WebApplicationContext
+2017-05-15 02:04:27 INFO  DispatcherServlet:508 - FrameworkServlet 'customer': initialization completed in 2727 ms
+2017-05-15 02:05:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-05-15 02:05:51 INFO  Version:54 - HHH000412: Hibernate Core {4.3.5.Final}
+2017-05-15 02:05:51 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2017-05-15 02:05:51 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2017-05-15 02:05:51 INFO  Configuration:2073 - HHH000043: Configuring from resource: /hibernate.cfg.xml
+2017-05-15 02:05:51 INFO  Configuration:2092 - HHH000040: Configuration resource: /hibernate.cfg.xml
+2017-05-15 02:05:52 WARN  DTDEntityResolver:75 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+2017-05-15 02:05:52 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2017-05-15 02:05:52 WARN  DriverManagerConnectionProviderImpl:93 - HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-05-15 02:05:52 INFO  DriverManagerConnectionProviderImpl:166 - HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/test]
+2017-05-15 02:05:52 INFO  DriverManagerConnectionProviderImpl:175 - HHH000046: Connection properties: {user=root, password=****}
+2017-05-15 02:05:52 INFO  DriverManagerConnectionProviderImpl:180 - HHH000006: Autocommit mode: false
+2017-05-15 02:05:52 INFO  DriverManagerConnectionProviderImpl:102 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-05-15 02:05:52 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-05-15 02:05:52 INFO  LobCreatorBuilder:97 - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-05-15 02:05:52 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2017-05-15 02:05:52 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2017-05-15 02:09:30 INFO  CustomerDaoImpl:21 - Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-15 02:09:30 WARN  SqlExceptionHelper:144 - SQL Error: 1062, SQLState: 23000
+2017-05-15 02:09:30 ERROR SqlExceptionHelper:146 - Duplicate entry 'k145as' for key 'PRIMARY'
+2017-05-15 02:09:30 INFO  AbstractBatchImpl:208 - HHH000010: On release of batch it still contained JDBC statements
+2017-05-15 02:09:30 INFO  CustomerDaoImpl:39 - Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-15 02:09:45 INFO  CustomerDaoImpl:21 - Starting of CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)
+2017-05-15 02:09:45 INFO  CustomerDaoImpl:39 - Completed CustomerDaoImpl: addCustomer(CustomerInfo customerInfo)

@@ -10,7 +10,8 @@ public class HibernateConnector {
 	    private Configuration cfg;
 	    private SessionFactory sessionFactory;
 	 
-	    private HibernateConnector() throws HibernateException {
+	    @SuppressWarnings("deprecation")
+		private HibernateConnector() throws HibernateException {
 	 
 	        // build the config
 	        cfg = new Configuration().configure();
@@ -34,7 +35,8 @@ public class HibernateConnector {
 	        return session;
 	    }
 	 
-	    private void reconnect() throws HibernateException {
+	    @SuppressWarnings("deprecation")
+		private void reconnect() throws HibernateException {
 	        this.sessionFactory = cfg.buildSessionFactory();
 	    }
 

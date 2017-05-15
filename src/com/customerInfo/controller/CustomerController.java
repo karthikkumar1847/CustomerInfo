@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.customerInfo.bo.CustomerBo;
 import com.customerInfo.validation.CustomerValidationException;
 import com.customerInfo.vo.CustomerInfo;
+import com.customerInfo.vo.ListCustomerInfo;
 
 /**
  * @author Karthik Kumar
@@ -69,6 +70,7 @@ public class CustomerController {
 		ModelAndView mv = new ModelAndView("contact");
 		return mv;
 	}
+	
 	@RequestMapping(value = "/contact.go", method = RequestMethod.POST)
 	public ModelAndView displayBank(@ModelAttribute("cinfo")CustomerInfo cinfo){
 		System.out.println("Starting of CustomerController: displayBank(@ModelAttribute(\"cinfo\")CustomerInfo cinfo)");
@@ -90,6 +92,7 @@ public class CustomerController {
 		ModelAndView mv = new ModelAndView("bank");
 		return mv;
 	}
+	
 	@RequestMapping(value = "/bank.go", method = RequestMethod.POST)
 	public ModelAndView displayOutput(@ModelAttribute("cinfo")CustomerInfo cinfo){
 		System.out.println("Starting of CustomerController: displayOutput(@ModelAttribute(\"cinfo\")CustomerInfo cinfo)");
@@ -112,7 +115,7 @@ public class CustomerController {
 		return mv;
 	}
 	
-	@RequestMapping(value = "/insertCustomer.go", method = RequestMethod.POST, consumes = "application/json")
+	@RequestMapping(value = "/insertCustomer.go", method = RequestMethod.POST, consumes = {"application/json","application/xml"})
 	public ResponseEntity<CustomerInfo> insertCustomer(@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
 		 String s =  customerBo.insertCustomer(customerInfo);	
 		 if(s.equals("success"))
@@ -121,25 +124,44 @@ public class CustomerController {
 				return new ResponseEntity<CustomerInfo>(HttpStatus.FOUND);
 	}
 	
-	@RequestMapping(value = "/{actno}/getCustomer.go",method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<CustomerInfo> getCustomer(@PathVariable String actno) throws CustomerValidationException, Exception{
-		CustomerInfo customerInfo = customerBo.getCustomer(actno);	
-		if(customerInfo != null)
-			return new ResponseEntity<CustomerInfo>(customerInfo,HttpStatus.OK);
+	@RequestMapping(value = "/{actno}/getCustomer/xml.go",method = RequestMethod.GET, produces = {"application/xml"})
+	public ResponseEntity<CustomerInfo> getCustomerXml(@PathVariable String actno) throws CustomerValidationException, Exception{
+		CustomerInfo customer = customerBo.getCustomer(actno);	
+		if(customer != null)
+			return new ResponseEntity<CustomerInfo>(customer,HttpStatus.OK);
 		else
 			return new ResponseEntity<CustomerInfo>(HttpStatus.NOT_FOUND);
 	}
 	
-	@RequestMapping(value = "/getAllCustomers.go",method = RequestMethod.GET, produces = "application/json")
-	public ResponseEntity<List<CustomerInfo>> getCustomers() throws CustomerValidationException, Exception{
-		List<CustomerInfo> list =  customerBo.getCustomers();	
-		if(!list.isEmpty())
-			return new ResponseEntity<List<CustomerInfo>>(list,HttpStatus.OK);
+	@RequestMapping(value = "/{actno}/getCustomer/json.go",method = RequestMethod.GET, produces = {"application/json"})
+	public ResponseEntity<CustomerInfo> getCustomerJson(@PathVariable String actno) throws CustomerValidationException, Exception{
+		CustomerInfo customer = customerBo.getCustomer(actno);	
+		if(customer != null)
+			return new ResponseEntity<CustomerInfo>(customer,HttpStatus.OK);
+		else
+			return new ResponseEntity<CustomerInfo>(HttpStatus.NOT_FOUND);
+	}
+	
+	@RequestMapping(value = "/getAllCustomers/json.go",method = RequestMethod.GET, produces = "application/json")
+	public ResponseEntity<List<CustomerInfo>> getCustomersJson() throws CustomerValidationException, Exception{
+		List<CustomerInfo> customer =  customerBo.getCustomers();	
+		if(!customer.isEmpty())
+			return new ResponseEntity<List<CustomerInfo>>(customer,HttpStatus.OK);
 		else
 			return new ResponseEntity<List<CustomerInfo>>(HttpStatus.NOT_FOUND);
 	}
 	
-	@RequestMapping(value = "/{ssn}/updateCustomer.go", method = RequestMethod.PUT, consumes = "application/json")
+	@RequestMapping(value = "/getAllCustomers/xml.go",method = RequestMethod.GET, produces = "application/xml")
+	public ResponseEntity<ListCustomerInfo> getCustomersXml() throws CustomerValidationException, Exception{
+		ListCustomerInfo customers =  new ListCustomerInfo();
+		customers.setCustomers(customerBo.getCustomers());
+		if(! customers.getCustomers().isEmpty())
+			return new ResponseEntity<ListCustomerInfo>(customers,HttpStatus.OK);
+		else
+			return new ResponseEntity<ListCustomerInfo>(HttpStatus.NOT_FOUND);
+	}
+	
+	@RequestMapping(value = "/{ssn}/updateCustomer.go", method = RequestMethod.PUT, consumes = {"application/json","application/xml"})
 	public ResponseEntity<CustomerInfo> updateCustomer(@PathVariable String ssn,@RequestBody CustomerInfo customerInfo) throws CustomerValidationException, Exception{
 		String s = customerBo.updateCustomer(ssn,customerInfo);	
 		if(s.equals("success"))
