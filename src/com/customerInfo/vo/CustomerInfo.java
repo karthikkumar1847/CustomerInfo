@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @Table(name="customerinfotable",uniqueConstraints = {@UniqueConstraint(columnNames = {"actno"})})
 @XmlRootElement(name="customer")
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.NONE)
 public class CustomerInfo implements Serializable {
 
 	/**
@@ -44,9 +44,9 @@ public class CustomerInfo implements Serializable {
 	private Long phoneNumber ;
 	@XmlElement
 	private String bankName;
-	@XmlElement
-	private String accountNumber ;
 	@XmlAttribute
+	private String accountNumber ;
+	@XmlElement
 	private String ssn ;
 	
 	public CustomerInfo() {
