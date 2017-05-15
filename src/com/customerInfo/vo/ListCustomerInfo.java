@@ -9,9 +9,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "customers")
 public class ListCustomerInfo implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	private List<CustomerInfo> customers = new ArrayList<CustomerInfo>();
